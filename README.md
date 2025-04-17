@@ -2,7 +2,7 @@
 
 We'll create a Python Flask web service that runs CoolProp, then connect it to Google Apps Script so you can call fluid properties directly in Google Sheets.
 
-#Step 1: Set Up Your Python Flask Server
+# Step 1: Set Up Your Python Flask Server
 Install Flask and CoolProp on your server and tranfer 
 
 coolprop_api.py
