@@ -28,7 +28,7 @@ https://your-server.com/get-property
 # Step 3: Connect Google Apps Script to the API
 Now, create a Google Apps Script function in Google Sheets to call the API:
 
-
+ ```js
 function getFluidProperty(fluid, prop, temp, pressure) {
   var url = "https://your-server.com/get-property?fluid=" + fluid + "&prop=" + prop + "&temp=" + temp + "&pressure=" + pressure;
   
@@ -41,7 +41,7 @@ function getFluidProperty(fluid, prop, temp, pressure) {
     return data.value;  // Return the property value
   }
 }
-
+ ```
 # How to Use It in Google Sheets
 In any sheet cell:
 
