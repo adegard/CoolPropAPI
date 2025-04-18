@@ -11,10 +11,15 @@ def get_property():
     pressure = float(request.args.get('pressure', 101325))  # Default pressure in Pascals
     
     try:
-        value = CP.PropsSI(prop, 'T', temp, 'P', pressure, fluid)
+        # If requesting Psat, use saturation property
+        if prop.lower() == "psat":
+            value = CP.PropsSI("P", "T", temp, "Q", 0, fluid)  # Saturation pressure at temp
+        else:
+            value = CP.PropsSI(prop, 'T', temp, 'P', pressure, fluid)
+
         return jsonify({'fluid': fluid, 'property': prop, 'value': value})
     except Exception as e:
         return jsonify({'error': str(e)})
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
