@@ -43,10 +43,10 @@ function getFluidProperty(fluid, prop, temp, pressure) {
 }
  ```
 # How to Use It in Google Sheets
-In any sheet cell:
+In any google sheet cell:
 
-excel
-=getFluidProperty("Water", "Cpmass", 300, 101325)
+
+ ```=getFluidProperty("Water", "Cpmass", 300, 101325) ```
 
 💡 This calls CoolProp remotely and retrieves specific heat (CP) of water at 300K and 1 atm.
 
