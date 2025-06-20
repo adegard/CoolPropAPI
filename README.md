@@ -1,4 +1,4 @@
-## Setting up a CoolProp-based web API for Google Sheets (coolProp wrapper)
+## Setting up a CoolProp-based web API for Google Sheets (CoolProp wrapper)
 
 We'll create a Python Flask web service that runs CoolProp, then connect it to Google Apps Script so you can call fluid properties directly in Google Sheets.
 
@@ -13,7 +13,7 @@ requirement.txt file
 # Step 2: Deploy the API
 To make this accessible from Google Sheets, host the Flask server on a cloud provider like:
 
-- Render (free deployment)
+- Render (free deployment) <-- prefered
 
 - Heroku (easy setup)
 
